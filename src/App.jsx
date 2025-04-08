@@ -1,13 +1,14 @@
  
 import './App.css'
+import Navbar from './components/Navbar'
 
 function App() {
    
 
   return (
     <>
-     <h1 className=" container mx-auto text-blue-400 font-bold">Secondary</h1>  
-     <h1 className=" container mx-auto text-blue-500 font-bold">Secondary</h1>  
+    <Navbar></Navbar>
+     
     </>
   )
 }
