@@ -1,16 +1,21 @@
 import React, { } from 'react';
 import Blog from '../Blog/Blog';
+import { FaRegHeart } from "react-icons/fa";
 
 const Blogs = ({blogs}) => {
   // console.log(blogs)
 
    
     return (
+ <div className="bg-indigo-50  mx-auto "> 
+ <div className=" container mx-auto">
 
+  <h3 className="text-3xl font-medium text-[#0E2954] pt-10">Active Auctions</h3>
+  <p className="text-xl text-[#0E2954] pb-3">Discover and bid on extraordinary items</p>
       
- <div className="flex mt-12">
+ <div className="flex justify-between bg-indigo-50    gap-7  ">
  <div className="">
-     <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
+     <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100 p-5">
   <table className="table">
     {/* head */}
     <thead>
@@ -49,6 +54,7 @@ const Blogs = ({blogs}) => {
 
         <td>{blog.currentBidPrice}</td>
         <td>{blog.timeLeft}</td>
+        <td className=""><FaRegHeart /></td>
           </tr>
         ))
        }
@@ -57,11 +63,12 @@ const Blogs = ({blogs}) => {
 </div>
      </div>
          
-        <div>
-          
+        <div className="bg-base-100 w-96 rounded-2xl p-5">
+          <h1>sdhjfsh</h1>
         </div>
      </div>
-     
+      </div>
+      </div>
         
     );
 };
