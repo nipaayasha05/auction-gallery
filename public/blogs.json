@@ -1,0 +1,57 @@
+[
+    {
+      "id": "1",
+      "title": "Vintage Leica M3 Camera",
+      "description": "A classic vintage Leica M3 camera in excellent condition, perfect for collectors and photography enthusiasts.",
+      "currentBidPrice": "$2,850",
+      "timeLeft": "2 Days left",
+      "bidsCount": 10,
+      "image": "https://i.ibb.co.com/jk1hN6Jn/Bid1-min.png"
+    },
+    {
+      "id": "2",
+      "title": "1965 Gibson SG Standard Electric Guitar",
+      "description": "An iconic 1965 Gibson SG electric guitar known for its sharp tone and legendary rock heritage.",
+      "currentBidPrice": "$2,850",
+      "timeLeft": "2 Days left",
+      "bidsCount": 8,
+      "image": "https://i.ibb.co.com/KQn1hgm/Bid2-min.png"
+    },
+    {
+      "id": "3",
+      "title": "Original Apple Macintosh 128K (1984)",
+      "description": "The very first Macintosh released by Apple in 1984 — a rare piece of computing history.",
+      "currentBidPrice": "$2,850",
+      "timeLeft": "2 Days left",
+      "bidsCount": 15,
+      "image": "https://i.ibb.co.com/ynYxdk1R/Bid3-min.png"
+    },
+    {
+      "id": "4",
+      "title": "Rolex Submariner 16610",
+      "description": "A luxury timepiece known for its durability and timeless design — the Rolex Submariner 16610.",
+      "currentBidPrice": "$2,850",
+      "timeLeft": "2 Days left",
+      "bidsCount": 20,
+      "image": "https://i.ibb.co.com/9HFTxb4h/Bid4-min.png"
+    },
+    {
+      "id": "5",
+      "title": "First Edition 'The Great Gatsby' by F. Scott Fitzgerald",
+      "description": "A rare first edition of the literary classic 'The Great Gatsby', ideal for collectors and book lovers.",
+      "currentBidPrice": "$2,850",
+      "timeLeft": "2 Days left",
+      "bidsCount": 5,
+      "image": "https://i.ibb.co.com/xS8tHVDK/Bid6-min.png"
+    },
+    {
+      "id": "6",
+      "title": "Mid-Century Modern Eames Lounge Chair",
+      "description": "An iconic Eames Lounge Chair from the mid-century modern era — timeless comfort and style.",
+      "currentBidPrice": "$2,850",
+      "timeLeft": "2 Days left",
+      "bidsCount": 18,
+      "image": "https://i.ibb.co.com/v4dCyC0N/Bid5-min.png"
+    }
+  ]
+  

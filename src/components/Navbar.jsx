@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <div className="poppins">
+        <div className="poppins  ">
             <div className="navbar bg-base-100 shadow-sm">
                 <div className="container mx-auto flex justify-between">
                 <div className="">
