@@ -10,7 +10,7 @@ function App() {
 
 const [blogs,setBlogs] = useState([])
 
-// const notify = () => toast("🦄 Wow so easy!!!")
+ 
 
 
 useEffect(()=>{
@@ -19,8 +19,8 @@ useEffect(()=>{
    .then(data=>setBlogs(data))
    },[])
 
-  return (
-    <>
+return (
+ <>
     <Navbar></Navbar>
     <Banner></Banner>
     <Blogs blogs={blogs}
@@ -28,12 +28,7 @@ useEffect(()=>{
     ></Blogs>
 
     <Footer></Footer>
-
-    
-     
-     
-    
-    </>
+ </>
   )
 }
 
