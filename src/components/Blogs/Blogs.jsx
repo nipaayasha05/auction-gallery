@@ -123,7 +123,7 @@ const handleColor =(blog) =>{
 
      
          
-        <div className="bg-base-100  w-2/6 rounded-box p-5 ">
+        <div className="bg-base-100  w-2/6 rounded-box p-5 self-start">
             <div className="flex justify-center items-center gap-3  border-b-2 border-gray-300">
             <BsFillHeartFill />
             <h3 className="text-3xl font-medium text-gray-700 pb-3">Favorite Items</h3>
