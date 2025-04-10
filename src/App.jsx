@@ -4,6 +4,7 @@ import './App.css'
 import Banner from './components/Banner'
 import Navbar from './components/Navbar'
 import Blogs from './components/Blogs/Blogs'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -25,6 +26,8 @@ useEffect(()=>{
     <Blogs blogs={blogs}
      
     ></Blogs>
+
+    <Footer></Footer>
 
     
      

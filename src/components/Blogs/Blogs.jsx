@@ -3,13 +3,14 @@ import Blog from '../Blog/Blog';
 import { FaRegHeart } from "react-icons/fa";
 import { SlHeart } from "react-icons/sl";
 import { BsFillHeartFill } from "react-icons/bs";
-import { ToastContainer, toast } from 'react-toastify';
+import {   toast } from 'react-toastify';
+import { RxCross1 } from "react-icons/rx";
 
 const Blogs = ({blogs}) => {
 
-  // const add =()=>{
-  //   toast.success("easy") 
-  // }
+  const add =()=>{
+    toast.success("easy") 
+  }
 
   const remove =()=>{
      toast.error("hard")
@@ -18,25 +19,30 @@ const Blogs = ({blogs}) => {
   // const notify = () => toast("Remove!");
   // console.log(blogs)
 const [bookmarked,setBookMarked] = useState([])
-// const [color,setColor] = useState("black")
+const [readingCount,setReadingCount] = useState(0)
 // console.log(color)
 
 
 const handleBookMark = (blog) =>{
-  console.log(blog)
+  // console.log(blog)
   // const marked= bookmarked.find((book)=>book.id===blog.id)
   // console.log(marked)
   //  if(!marked){
   //   setBookMarked([...bookmarked,blog])
   //  }
 // if(!marked){
+ 
+const newTime = readingCount + 
+blog.currentBidPrice
+setReadingCount( newTime)
+
   setBookMarked([...bookmarked,blog])
 // }
 
 
  
 }
-console.log(bookmarked)
+// console.log(bookmarked)
 
 
 const handleRemove = (id) =>{
@@ -54,6 +60,7 @@ const handleColor =(blog) =>{
 // setAdd(disable)
 // }
 
+ 
    
     return (
  <div className="bg-indigo-50  mx-auto "> 
@@ -101,15 +108,17 @@ const handleColor =(blog) =>{
           </div>
         </td>
 
-        <td>{blog.currentBidPrice}</td>
+        <td>${blog.currentBidPrice}</td>
         <td>{blog.timeLeft}</td>
-        <td onClick={()=>add()}><button className={`${handleColor(blog)}` }    onClick={()=>{handleBookMark(blog); }}
+        <td ><button className={`${handleColor(blog)}` }    onClick={()=>{handleBookMark(blog);
+          add()
+         }}
           disabled= {bookmarked.find((book)=>book.id===blog.id)}
 
           ><BsFillHeartFill />
-           <ToastContainer />
+        
           </button>
-          <ToastContainer />
+         
           </td>
           
           </tr>
@@ -119,30 +128,52 @@ const handleColor =(blog) =>{
   </table>
 </div>
      </div>
+
+     
          
         <div className="bg-base-100 w-2/6 rounded-2xl p-5 ">
             <div className="flex justify-center items-center gap-3  border-b-2 border-gray-300">
             <BsFillHeartFill />
             <h3 className="text-3xl font-medium text-gray-700 pb-3">Favorite Items</h3>
             </div>
+            <div className={ bookmarked.length > 0?'hidden':'block'}>
+            <h3 className=' pt-5 text-2xl font-medium text-center'>No favorites yet</h3>
+            <p className='border-b-2 border-gray-300 p-2 text-center text-gray-600'>Click the heart icon on any item to add it to your favorites</p>
+            </div>
+
+            
+            
 
             {
       bookmarked.map((marked)=><div key={marked.id}
       className=' flex justify-between items-start border-b-2 p-3 border-gray-400  '>
         <div className='flex gap-5 '>
-        <img className='w-16 h-16' src={marked.image} alt="" />
-        <h3>{marked.title}</h3>
+        <img className='w-16 h-16 rounded-md' src={marked.image} alt="" />
+        <div>
+        <h3 className='font-bold'>{marked.title}</h3>
+        <div className='flex justify-between pt-3'>
+          <p>${marked.currentBidPrice}</p>
+          <p>Bids: {marked.bidsCount}</p>
+        </div>
+        </div>
+        
         </div>
         <div onClick={()=>remove()}>
-        <button onClick={()=>{handleRemove(marked.id);}}>X
+        <button className='font-bold text-gray-700' onClick={()=>{handleRemove(marked.id);}}>
+          {/* X */}
+          <RxCross1 />
        
         </button>
-        <ToastContainer />
+       
         </div>
         
-        
+       
       </div>)
     }
+     <div className='flex justify-between text-2xl font-medium text-gray-700 pt-3'>
+              <h3>Total bids Amount</h3>
+               <h3>${readingCount}</h3>
+            </div>
             
         </div>
      </div>
