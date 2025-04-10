@@ -9,7 +9,10 @@ function App() {
 
 const [blogs,setBlogs] = useState([])
 
-   useEffect(()=>{
+// const notify = () => toast("🦄 Wow so easy!!!")
+
+
+useEffect(()=>{
    fetch("blogs.json")
    .then(res=>res.json())
    .then(data=>setBlogs(data))
@@ -19,7 +22,11 @@ const [blogs,setBlogs] = useState([])
     <>
     <Navbar></Navbar>
     <Banner></Banner>
-    <Blogs blogs={blogs}></Blogs>
+    <Blogs blogs={blogs}
+     
+    ></Blogs>
+
+    
      
      
     
