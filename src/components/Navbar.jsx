@@ -2,8 +2,8 @@ import React from 'react';
 
 const Navbar = () => {
     return (
-        <div className="poppins  ">
-            <div className="navbar bg-base-100 shadow-sm">
+        <div className=" poppins  ">
+            <div className="navbar bg-base-100 shadow-sm poppins">
                 <div className="container mx-auto flex justify-between">
                 <div className="">
     <a className="text-3xl font-bold"><span className="text-[#003EA4]">Auction</span><span className="text-[#FFD337]">Gallery</span></a>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BsFillHeartFill } from "react-icons/bs";
 import {   toast } from 'react-toastify';
 import { RxCross1 } from "react-icons/rx";
-
+ 
 const Blogs = ({blogs}) => {
 
   const add =()=>{
@@ -16,7 +16,7 @@ const Blogs = ({blogs}) => {
    
 const [bookmarked,setBookMarked] = useState([])
 const [readingCount,setReadingCount] = useState(0)
-// console.log(color)
+ 
 
 
 const handleBookMark = (blog) =>{
@@ -29,12 +29,12 @@ setReadingCount( newTime)
 
   setBookMarked([...bookmarked,blog])
   }
-// console.log(bookmarked)
+ 
 
 
 const handleRemove = (id ) =>{
   console.log(id)
-  // console.log(blog)
+   
   const remainingBookMark = bookmarked.filter((mark)=>mark.id !== id)
   setBookMarked(remainingBookMark)
 
@@ -42,7 +42,7 @@ const handleRemove = (id ) =>{
   console.log(blog)
  
   const newTime = readingCount - blog.currentBidPrice
-// console.log(newTime)
+ 
 setReadingCount( newTime)
 
 }
@@ -55,7 +55,7 @@ const handleColor =(blog) =>{
 
  
     return (
- <div className="bg-indigo-50  mx-auto "> 
+ <div className="bg-indigo-50  mx-auto sora"> 
  <div className=" container mx-auto">
 
   <h3 className="text-3xl font-medium text-[#0E2954]  pt-10">Active Auctions</h3>
@@ -123,7 +123,7 @@ const handleColor =(blog) =>{
 
      
          
-        <div className="bg-base-100  w-2/6 rounded-2xl p-5 ">
+        <div className="bg-base-100  w-2/6 rounded-box p-5 ">
             <div className="flex justify-center items-center gap-3  border-b-2 border-gray-300">
             <BsFillHeartFill />
             <h3 className="text-3xl font-medium text-gray-700 pb-3">Favorite Items</h3>
@@ -138,12 +138,12 @@ const handleColor =(blog) =>{
 
             {
       bookmarked.map((marked)=><div key={marked.id}
-      className=' flex justify-between items-start border-b-2 p-3 border-gray-400 text-gray-700  '>
+      className=' flex justify-between items-start border-b-2 p-3 border-gray-300 text-gray-700  '>
         <div className='flex gap-5 '>
         <img className='w-16 h-16 rounded-md' src={marked.image} alt="" />
-        <div className='w-2/3'>
+        <div className='w-3/4'>
         <h3 className=' text-xl font-bold'>{marked.title}</h3>
-        <div className='flex justify-between pt-3 '>
+        <div className='flex gap-5 pt-3 '>
           <p className='text-xl '>${marked.currentBidPrice}</p>
           <p className=' text-xl '>Bids: {marked.bidsCount}</p>
         </div>
@@ -154,7 +154,7 @@ const handleColor =(blog) =>{
         <button className='font-bold text-gray-700' onClick={()=>{handleRemove(marked.id);
           
         }}>
-          {/* X */}
+          
           <RxCross1 />
        
         </button>

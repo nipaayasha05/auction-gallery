@@ -6,6 +6,7 @@ import Navbar from './components/Navbar'
 import Blogs from './components/Blogs/Blogs'
 import Footer from './components/Footer'
 
+
 function App() {
 
 const [blogs,setBlogs] = useState([])
