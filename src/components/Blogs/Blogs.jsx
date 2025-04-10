@@ -9,11 +9,11 @@ import { RxCross1 } from "react-icons/rx";
 const Blogs = ({blogs}) => {
 
   const add =()=>{
-    toast.success("easy") 
+    toast.success("Item Added to your Favorite Lists") 
   }
 
   const remove =()=>{
-     toast.error("hard")
+     toast.warning("Item Removed From Favorite!")
   }
   const notify = () => toast("Wow so easy!");
   // const notify = () => toast("Remove!");
@@ -24,7 +24,7 @@ const [readingCount,setReadingCount] = useState(0)
 
 
 const handleBookMark = (blog) =>{
-  // console.log(blog)
+  console.log(blog)
   // const marked= bookmarked.find((book)=>book.id===blog.id)
   // console.log(marked)
   //  if(!marked){
@@ -45,10 +45,33 @@ setReadingCount( newTime)
 // console.log(bookmarked)
 
 
-const handleRemove = (id) =>{
+const handleRemove = (id ) =>{
+  console.log(id)
+  // console.log(blog)
   const remainingBookMark = bookmarked.filter((mark)=>mark.id !== id)
   setBookMarked(remainingBookMark)
+
+  const blog = blogs.find((blog)=>blog.id===id)
+  console.log(blog)
+//   const newTime = readingCount + 
+//   blog.currentBidPrice
+// console.log(newTime)
+//   const count = newTime - blog.currentBidPrice
+//   console.log(count)
+  // setReadingCount( count)
+  const newTime = readingCount - 
+blog.currentBidPrice
+console.log(newTime)
+setReadingCount( newTime)
+
 }
+
+// const handleAddRemove = (blog)=>{
+//   console.log(blog)
+//   const newTime = readingCount + 
+// blog.currentBidPrice
+// setReadingCount( newTime)
+// }
 
 
 const handleColor =(blog) =>{
@@ -159,7 +182,9 @@ const handleColor =(blog) =>{
         
         </div>
         <div onClick={()=>remove()}>
-        <button className='font-bold text-gray-700' onClick={()=>{handleRemove(marked.id);}}>
+        <button className='font-bold text-gray-700' onClick={()=>{handleRemove(marked.id);
+          
+        }}>
           {/* X */}
           <RxCross1 />
        
